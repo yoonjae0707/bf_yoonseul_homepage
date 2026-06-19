@@ -1,0 +1,114 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mainContent {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 130px 24px 60px 24px; /* Space for the floating capsule header navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabWrapper {
+  width: 100%;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 24px;
+  border-top: 1px solid var(--card-border);
+  backdrop-filter: var(--glass-blur);
+  background: rgba(var(--background-raw), 0.35);
+  margin-top: auto;
+  width: 100%;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footerLogo {
+  font-size: 1.15rem;
+  font-weight: 850;
+  color: var(--foreground);
+  letter-spacing: -0.04em;
+}
+
+.businessInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.businessInfo p {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.separator {
+  color: var(--card-border);
+}
+
+.copyright {
+  width: 100%;
+  max-width: 1000px;
+  border-top: 1px solid var(--card-border);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 100px 16px 40px 16px;
+  }
+  
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .businessInfo {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .businessInfo p {
+    justify-content: center;
+    gap: 8px;
+  }
+}

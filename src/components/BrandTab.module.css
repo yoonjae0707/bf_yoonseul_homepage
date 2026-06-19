@@ -1,0 +1,353 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.badge {
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: var(--radius-capsule);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* Brand Grid */
+.brandGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.brandCard {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.brandCard:hover {
+  transform: none; /* disable default scale-up in acrylic-card */
+  box-shadow: 0 16px 48px 0 var(--shadow-hover);
+  border-color: rgba(var(--accent-rgb), 0.15);
+}
+
+/* Logo container & Animations */
+.logoContainer {
+  height: 100%;
+  min-height: 280px;
+  background: rgba(var(--foreground-raw), 0.02);
+  border-right: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(45px);
+  opacity: 0.18;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ripple Logo Shape */
+.logoRipple {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.ripple1, .ripple2, .ripple3 {
+  position: absolute;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  animation: pulseRipple 4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.ripple1 {
+  width: 80px;
+  height: 40px;
+  animation-delay: 0s;
+  border-color: var(--accent);
+}
+
+.ripple2 {
+  width: 60px;
+  height: 30px;
+  animation-delay: 1.3s;
+  border-color: #ff2997;
+}
+
+.ripple3 {
+  width: 40px;
+  height: 20px;
+  animation-delay: 2.6s;
+  border-color: var(--foreground);
+}
+
+@keyframes pulseRipple {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.15) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) rotate(360deg);
+    opacity: 0.4;
+  }
+}
+
+/* Tech Cube Logo Shape */
+.logoTech {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #00f2fe;
+  border-radius: 12px;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateCube 6s ease-in-out infinite;
+}
+
+.innerNode {
+  width: 16px;
+  height: 16px;
+  background: #0071e3;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00f2fe;
+}
+
+@keyframes rotateCube {
+  0%, 100% {
+    transform: rotate(45deg) scale(0.9);
+    border-color: #00f2fe;
+  }
+  50% {
+    transform: rotate(225deg) scale(1.1);
+    border-color: #0071e3;
+  }
+}
+
+/* Studio Overlapping Capsules Logo Shape */
+.logoStudio {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  gap: 10px;
+}
+
+.capsule1, .capsule2 {
+  width: 22px;
+  height: 60px;
+  border-radius: var(--radius-capsule);
+  position: absolute;
+  transition: var(--transition-apple);
+}
+
+.capsule1 {
+  background: #ff9f0a;
+  transform: rotate(-30deg) translateX(-10px);
+  animation: floatCapsule1 5s ease-in-out infinite;
+}
+
+.capsule2 {
+  background: #bf5af2;
+  transform: rotate(30deg) translateX(10px);
+  mix-blend-mode: multiply;
+  animation: floatCapsule2 5s ease-in-out infinite;
+}
+
+/* Specific mix blend mode for dark theme */
+[data-theme="dark"] .capsule2 {
+  mix-blend-mode: screen;
+}
+
+@keyframes floatCapsule1 {
+  0%, 100% { transform: rotate(-30deg) translate(-10px, 0); }
+  50% { transform: rotate(-15deg) translate(-8px, -5px); }
+}
+
+@keyframes floatCapsule2 {
+  0%, 100% { transform: rotate(30deg) translate(10px, 0); }
+  50% { transform: rotate(15deg) translate(8px, 5px); }
+}
+
+/* Brand Info Card Content */
+.brandInfo {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.typeBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: var(--radius-capsule);
+  background: rgba(var(--accent-rgb), 0.08);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+}
+
+.brandName {
+  font-size: 1.6rem;
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.slogan {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-style: italic;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Brand Assets Row */
+.assetsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  border-top: 1px solid var(--card-border);
+  margin-top: 14px;
+  padding-top: 24px;
+}
+
+.assetItem {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.assetLabel {
+  font-size: 0.75rem;
+  font-weight: 750;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.colorPalette {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.colorSwatchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.colorSwatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.colorHex {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.fontFamilyValue {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .brandCard {
+    grid-template-columns: 1fr;
+  }
+  
+  .logoContainer {
+    min-height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--card-border);
+  }
+  
+  .brandInfo {
+    padding: 30px 20px;
+  }
+  
+  .assetsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
