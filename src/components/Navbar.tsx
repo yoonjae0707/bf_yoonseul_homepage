@@ -10,12 +10,12 @@ interface NavbarProps {
 }
 
 export default function Navbar({ activeTab, setActiveTab, tabs }: NavbarProps) {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({});
   const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
   useEffect(() => {
-    const currentTheme = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' || 'dark';
+    const currentTheme = document.documentElement.getAttribute('data-theme') as 'light' | 'dark' || 'light';
     setTheme(currentTheme);
   }, []);
 

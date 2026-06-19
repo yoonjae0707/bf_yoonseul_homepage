@@ -18,41 +18,41 @@ const CONTENTS: ContentItem[] = [
   {
     id: 1,
     type: 'youtube',
-    title: '[Flutter 강좌] 1시간 만에 만드는 아크릴모피즘 금융 앱 UI 완성하기',
-    thumbnail: '🎬 Flutter UI Speed-run Tutorial',
-    stats: '조회수 12.8만회 • 3주 전',
-    link: 'https://youtube.com',
-    badge: 'Tutorial',
+    title: '[STUDIO Peng1] 버추얼 크리에이티브 미디어 & 디자인 테크 채널',
+    thumbnail: '🎬 STUDIO Peng1 Official Channel',
+    stats: '구독자 1.2만명 • 동영상 48개',
+    link: 'https://www.youtube.com/@STUDIOPeng1',
+    badge: 'Virtual Art',
     colorGlow: 'rgba(255, 0, 0, 0.15)'
   },
   {
     id: 2,
-    type: 'instagram',
-    title: '디자이너가 알려주는 모바일 캡슐 버튼 설계 가이드 (UX 법칙)',
-    thumbnail: '📱 Capsule Button UX Guidelines',
-    stats: '좋아요 3.4천개 • 5일 전',
-    link: 'https://instagram.com',
-    badge: 'Design Tips',
-    colorGlow: 'rgba(225, 48, 108, 0.15)'
+    type: 'youtube',
+    title: '[본리에어 / VONRI AIR] 힐링 버추얼 항공 여정 & ASMR 사운드 스트리밍',
+    thumbnail: '✈️ VONRI AIR Streaming Channel',
+    stats: '구독자 2.5만명 • 동영상 120개',
+    link: 'https://www.youtube.com/@VONRIAIR',
+    badge: 'V-Stream',
+    colorGlow: 'rgba(255, 0, 0, 0.15)'
   },
   {
     id: 3,
-    type: 'youtube',
-    title: 'Python FastAPI와 PostgreSQL로 10만 동시접속 실시간 서버 버텨내기',
-    thumbnail: '⚡ Backend Scaling with FastAPI',
-    stats: '조회수 4.5만회 • 1달 전',
-    link: 'https://youtube.com',
-    badge: 'Engineering',
-    colorGlow: 'rgba(red, 0.1)'
+    type: 'instagram',
+    title: 'RIBBLE 버추얼 슈퍼앱 UI/UX 모바일 반응형 디자인 모듈 제작 비하인드',
+    thumbnail: '📱 RIBBLE Super-App UX Guidelines',
+    stats: '좋아요 4.8천개 • 3일 전',
+    link: 'https://instagram.com',
+    badge: 'Design UI',
+    colorGlow: 'rgba(225, 48, 108, 0.15)'
   },
   {
     id: 4,
     type: 'instagram',
-    title: 'BF YOONSEUL 브랜드 아이덴티티 및 BI 로고 제작 비하인드 스토리',
-    thumbnail: '🎨 Brand Identity & Logo Process',
-    stats: '좋아요 1.2천개 • 2주 전',
+    title: 'RITUDY 공부 타이머 한 손 조작 캡슐형 인터페이스 설계 및 디자인 시스템',
+    thumbnail: '🎨 RITUDY Design System & Haptic UX',
+    stats: '좋아요 2.1천개 • 1주 전',
     link: 'https://instagram.com',
-    badge: 'Branding',
+    badge: 'Product Design',
     colorGlow: 'rgba(225, 48, 108, 0.1)'
   }
 ];

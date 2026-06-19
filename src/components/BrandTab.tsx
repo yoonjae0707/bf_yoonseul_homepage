@@ -33,33 +33,63 @@ const BRANDS: Brand[] = [
   },
   {
     id: 2,
-    name: 'Yoonseul Tech',
+    name: 'RIBBLE',
     type: 'BI',
-    slogan: 'Precision Backend & AI Systems',
-    description: 'BF YOONSEUL의 인프라 및 AI 기술 전문 부서의 브랜드 이미지(BI)입니다. Python 프레임워크 기반의 고성능 서버 구축, 데이터 엔지니어링, 그리고 신뢰할 수 있는 정밀한 알고리즘 설계를 상징합니다.',
+    slogan: 'Virtual Super-App for Modern Life',
+    description: '가상과 현실을 긴밀하게 연결하는 버추얼 슈퍼앱 브랜드(BI)입니다. 채팅, 아바타, 쇼핑, 생산성 도구를 단 하나의 둥글둥글한 캡슐 인터페이스 안에 심리스(Seamless)하게 녹여냈습니다.',
     colors: [
-      { name: 'Tech Teal', hex: '#00f2fe' },
-      { name: 'Deep Cyber Blue', hex: '#0071e3' },
-      { name: 'Steel Gray', hex: '#86868b' }
+      { name: 'Super Purple', hex: '#bf5af2' },
+      { name: 'Cyan Shimmer', hex: '#00f2fe' },
+      { name: 'Royal Velvet', hex: '#5e5ce6' }
     ],
-    typography: 'JetBrains Mono / Inter (Structured & Modern)',
-    logoShape: 'tech',
-    logoColorGlow: 'linear-gradient(135deg, #00f2fe, #0071e3)'
+    typography: 'Outfit / Inter (Modern & Friendly Rounded)',
+    logoShape: 'studio',
+    logoColorGlow: 'linear-gradient(135deg, #bf5af2, #00f2fe)'
   },
   {
     id: 3,
-    name: 'Yoonseul Studio',
+    name: 'RITUDY',
     type: 'BI',
-    slogan: 'Creative Flutter Apps & UI Design',
-    description: '모바일/웹 UI 디자인 및 크로스플랫폼 Flutter 앱 전문 스튜디오 브랜드(BI)입니다. 사용자 중심의 탁월한 사용성, 세련된 아크릴모피즘 레이어링, 한 손 조작을 배려하는 둥글둥글한 인터페이스를 추구합니다.',
+    slogan: 'Focus & Grow Study Timer',
+    description: '몰입의 깊이를 시각적으로 보여주는 스마트 스터디 타이머 브랜드(BI)입니다. 시간의 흐름을 둥글고 정밀한 타이머 게이지와 부드러운 햅틱 피드백 연출을 통해 직관적으로 보여줍니다.',
     colors: [
-      { name: 'Studio Amber', hex: '#ff9f0a' },
-      { name: 'Neon Purple', hex: '#bf5af2' },
-      { name: 'Soft Gray', hex: '#f5f5f7' }
+      { name: 'Focus Green', hex: '#30d158' },
+      { name: 'Deep Forest', hex: '#093a14' },
+      { name: 'Steel Gray', hex: '#86868b' }
     ],
-    typography: 'Outfit / Apple SD Gothic Neo (Vibrant & Round)',
+    typography: 'JetBrains Mono / Inter (Structured & Numeric)',
+    logoShape: 'tech',
+    logoColorGlow: 'linear-gradient(135deg, #30d158, #86868b)'
+  },
+  {
+    id: 4,
+    name: 'RIMU',
+    type: 'BI',
+    slogan: 'Virtual Music Streaming Platform',
+    description: '가상 아티스트와 팬덤을 잇는 버추얼 전문 음원 스트리밍 플랫폼 브랜드(BI)입니다. 소리의 아름다운 파동과 웅장한 공간감을 파스텔톤의 물결 파형 로고와 유려한 카드 모션으로 담아냈습니다.',
+    colors: [
+      { name: 'Melody Pink', hex: '#ff375f' },
+      { name: 'Deep Indigo', hex: '#1c1c1e' },
+      { name: 'Acoustic White', hex: '#f5f5f7' }
+    ],
+    typography: 'Outfit / Montserrat (Expressive & Dynamic)',
+    logoShape: 'ripple',
+    logoColorGlow: 'linear-gradient(135deg, #ff375f, #1c1c1e)'
+  },
+  {
+    id: 5,
+    name: 'RIUP',
+    type: 'BI',
+    slogan: 'Popup Store Waiting Platform',
+    description: '실시간 대기열과 전국 팝업스토어 정보 조회를 돕는 웨이팅 플랫폼 브랜드(BI)입니다. 현장에서 기다리는 지루함을 해소하고 팝업 스토어의 흥미진진한 탐험 여정의 시작을 디자인합니다.',
+    colors: [
+      { name: 'Waiting Orange', hex: '#ff9f0a' },
+      { name: 'Active Red', hex: '#ff453a' },
+      { name: 'Light Canvas', hex: '#ffffff' }
+    ],
+    typography: 'Outfit / Apple SD Gothic Neo (Vibrant & Interactive)',
     logoShape: 'studio',
-    logoColorGlow: 'linear-gradient(135deg, #ff9f0a, #bf5af2)'
+    logoColorGlow: 'linear-gradient(135deg, #ff9f0a, #ff453a)'
   }
 ];
 
