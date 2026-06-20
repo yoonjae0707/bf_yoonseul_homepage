@@ -1,21 +1,35 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import HomeTab from '@/components/HomeTab';
 import BrandTab from '@/components/BrandTab';
 import PortfolioTab from '@/components/PortfolioTab';
 import ContentTab from '@/components/ContentTab';
+import NewsroomTab from '@/components/NewsroomTab';
 import ContactTab from '@/components/ContactTab';
 import styles from './page.module.css';
 
 const TABS = [
-  { id: 'home', label: '홈' },
-  { id: 'brand', label: '브랜드' },
-  { id: 'portfolio', label: '포트폴리오' },
-  { id: 'content', label: '컨텐츠' },
-  { id: 'contact', label: '컨텍' },
+  { id: 'home', label: 'Home' },
+  { id: 'brand', label: 'Brand' },
+  { id: 'portfolio', label: 'Portfolio' },
+  { id: 'content', label: 'Content' },
+  { id: 'newsroom', label: 'Newsroom' },
+  { id: 'contact', label: 'Contact' },
 ];
+
+function SearchParamsHandler({ setActiveTab }: { setActiveTab: (tab: string) => void }) {
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const tab = searchParams.get('tab');
+    if (tab) {
+      setActiveTab(tab);
+    }
+  }, [searchParams, setActiveTab]);
+  return null;
+}
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('home');
@@ -36,6 +50,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Suspense fallback={null}>
+        <SearchParamsHandler setActiveTab={setActiveTab} />
+      </Suspense>
       {/* Floating Capsule Header Navigation */}
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} tabs={TABS} />
       
@@ -46,6 +63,7 @@ export default function Home() {
           {renderTab === 'brand' && <BrandTab />}
           {renderTab === 'portfolio' && <PortfolioTab />}
           {renderTab === 'content' && <ContentTab />}
+          {renderTab === 'newsroom' && <NewsroomTab />}
           {renderTab === 'contact' && <ContactTab />}
         </div>
       </main>
@@ -61,9 +79,7 @@ export default function Home() {
               <span>대표자: 소윤재</span>
             </p>
             <p>
-              <span>이메일: contact@bf-yoonseul.com</span>
-              <span className={styles.separator}>|</span>
-              <span>주소: 서울특별시 마포구 백범로 (임의 주소)</span>
+              <span>이메일: bfyoonseul@gmail.com</span>
             </p>
           </div>
         </div>

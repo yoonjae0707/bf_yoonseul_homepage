@@ -1,0 +1,676 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  position: relative;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.bgGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.22;
+  z-index: 1;
+  pointer-events: none;
+  animation: pulseGlow 9s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -40%) scale(1.05) rotate(120deg);
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  gap: 24px;
+  animation: fadeInUp 1s var(--ease-apple) forwards;
+}
+
+.catBadge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 6px 16px;
+  border-radius: var(--radius-capsule);
+  background: rgba(var(--foreground-raw), 0.08);
+  color: var(--foreground);
+  letter-spacing: 0.05em;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  max-width: 850px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: rgba(var(--foreground-raw), 0.04);
+  padding: 6px 14px;
+  border-radius: var(--radius-capsule);
+  border: 1px solid var(--card-border);
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -8px);
+  }
+  60% {
+    transform: translate(-50%, -4px);
+  }
+}
+
+/* Detail Section */
+.detailSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px 120px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.gridContent {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 48px;
+}
+
+.descriptionBox h2 {
+  font-size: 1.8rem;
+  font-weight: 850;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.descriptionBox p {
+  font-size: 1.12rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.metaInfoCard {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: fit-content;
+}
+
+.metaInfoCard h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaValue {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Links inside metadata card */
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Preview Section */
+.previewSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.previewSection h2 {
+  font-size: 1.8rem;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+/* Interactive Browser Mockup Frame */
+.browserFrame {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.browserHeader {
+  background: rgba(var(--foreground-raw), 0.03);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.windowDots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #ff5f56; }
+.dotYellow { background: #ffbd2e; }
+.dotGreen { background: #27c93f; }
+
+.addressBar {
+  flex-grow: 1;
+  background: var(--background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.lockIcon {
+  color: #30d158;
+}
+
+.browserBody {
+  width: 100%;
+  height: 600px;
+  background: #ffffff;
+  position: relative;
+}
+
+[data-theme="dark"] .browserBody {
+  background: #1c1c1e;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Simulated Presentation / Document Webview Fallback */
+.fallbackMockup {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1c1c1e, #070709);
+  color: #ffffff;
+  padding: 40px;
+  position: relative;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.mockupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.mockupTitle {
+  font-weight: 750;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.mockupBadge {
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: var(--radius-capsule);
+}
+
+.mockupSlideContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  gap: 24px;
+}
+
+.slidePageGlow {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.4;
+  position: absolute;
+}
+
+.slideHeading {
+  font-size: 2.2rem;
+  font-weight: 900;
+  max-width: 600px;
+  line-height: 1.3;
+  z-index: 2;
+}
+
+.slideText {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.mockupControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+.slideNum {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.slideNav {
+  display: flex;
+  gap: 8px;
+}
+
+.navBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: #ffffff;
+  color: #070709;
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.backBtnWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+/* Responsive styling */
+@media (max-width: 900px) {
+  .gridContent {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .browserBody {
+    height: 450px;
+  }
+  .slideHeading {
+    font-size: 1.5rem;
+  }
+  .fallbackMockup {
+    padding: 20px;
+  }
+}
+
+/* Secure PDF Viewer (Dynamic Height & Large Page Display) */
+.securePdfViewer {
+  width: 100%;
+  position: relative;
+  background: var(--card-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  padding: 30px;
+  box-shadow: 0 12px 40px var(--shadow-color);
+  box-sizing: border-box;
+}
+
+.pdfLoader, .pdfError {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  min-height: 300px;
+}
+
+.pdfError {
+  color: #ff453a;
+  text-align: center;
+}
+
+.pdfViewerWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdfCanvasBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .pdfCanvasBox {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.pdfCanvas {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .pdfCanvas {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.pdfControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--card-border);
+  padding-top: 20px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+/* PDF Slider and Slide Transitions */
+.pdfSliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  border-radius: var(--radius-card);
+}
+
+.pdfSliderContainer:active {
+  cursor: grabbing;
+}
+
+.pdfSliderTrack {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+
+.pdfSlide {
+  flex: 0 0 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fallback Simulated Slider and Slide Transitions */
+.fallbackSliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
+  border-radius: 16px;
+}
+
+.fallbackSliderContainer:active {
+  cursor: grabbing;
+}
+
+.fallbackSliderTrack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Hover side arrow buttons */
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: auto;
+}
+
+[data-theme="light"] .arrowBtn {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #000000;
+}
+
+.pdfSliderContainer:hover .arrowBtn,
+.fallbackSliderContainer:hover .arrowBtn {
+  opacity: 1;
+}
+
+.prevArrow {
+  left: 16px;
+}
+
+.nextArrow {
+  right: 16px;
+}
+
+.arrowBtn:hover:not(:disabled) {
+  background: var(--accent);
+  color: #000000;
+  border-color: var(--accent);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.arrowBtn:disabled {
+  opacity: 0.15 !important;
+  cursor: not-allowed;
+}
+
+/* Dots Pagination Indicator */
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(var(--foreground-raw), 0.15);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  padding: 0;
+}
+
+[data-theme="dark"] .dot {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.activeDot {
+  background: var(--accent);
+  transform: scale(1.15);
+  width: 20px;
+  border-radius: 4px;
+}
+
+/* Collapsible Description Box & Read More Overlay */
+.descriptionBody {
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  width: 100%;
+}
+
+.collapsed {
+  max-height: 280px;
+}
+
+.expanded {
+  max-height: 4000px; /* High limit for long text */
+}
+
+.readMoreOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, var(--background) 25%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 8px;
+  pointer-events: none;
+}
+
+.readMoreOverlay button {
+  pointer-events: auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}

@@ -1,0 +1,320 @@
+{
+  "profile": {
+    "name": "소윤재",
+    "tagline": "AI 시대, AI로 모든 걸 컨트롤하고 만들어가는 바이브 개발자입니다.",
+    "bio": "기획, 디자인, 개발. 이 모든 걸 자유롭게 다루고 활용하는 올라운드 개발자입니다.",
+    "badges": [
+      "Planning",
+      "Flutter Dev",
+      "Python Back-End",
+      "UI/UX Design"
+    ]
+  },
+  "brands": [
+    {
+      "id": 1,
+      "name": "BF YOONSEUL",
+      "type": "CI",
+      "slogan": "The Light to Benefit the World, 세상을 이롭게 하는 빛",
+      "description": "BF YOONSEUL의 메인 기업 이미지(CI)입니다. 디지털이라는 광활한 바다 위에서 햇빛에 반사되어 찬란하게 빛나는 윤슬(잔물결)을 형상화했습니다. 기획, 디자인, 기술력의 융합을 상징합니다.",
+      "colors": [
+        {
+          "name": "Yoonseul Blue",
+          "hex": "#2997ff"
+        },
+        {
+          "name": "Brilliant Fuchsia",
+          "hex": "#ff2997"
+        },
+        {
+          "name": "Space Black",
+          "hex": "#070709"
+        }
+      ],
+      "typography": "Outfit / Inter (Bold & Clean Sans-Serif)",
+      "logo_shape": "ripple",
+      "logo_color_glow": "linear-gradient(135deg, #2997ff, #ff2997)"
+    },
+    {
+      "id": 2,
+      "name": "RIBBLE",
+      "type": "BI",
+      "slogan": "Virtual Super-App for Modern Life",
+      "description": "가상과 현실을 긴밀하게 연결하는 버추얼 슈퍼앱 브랜드(BI)입니다. 채팅, 아바타, 쇼핑, 생산성 도구를 단 하나의 둥글둥글한 캡슐 인터페이스 안에 심리스(Seamless)하게 녹여냈습니다.",
+      "colors": [
+        {
+          "name": "Super Purple",
+          "hex": "#bf5af2"
+        },
+        {
+          "name": "Cyan Shimmer",
+          "hex": "#00f2fe"
+        },
+        {
+          "name": "Royal Velvet",
+          "hex": "#5e5ce6"
+        }
+      ],
+      "typography": "Outfit / Inter (Modern & Friendly Rounded)",
+      "logo_shape": "studio",
+      "logo_color_glow": "linear-gradient(135deg, #bf5af2, #00f2fe)"
+    },
+    {
+      "id": 3,
+      "name": "RITUDY",
+      "type": "BI",
+      "slogan": "집중, 그 본질을 보다",
+      "description": "몰입의 깊이를 시각적으로 보여주는 스마트 스터디 타이머 브랜드(BI)입니다. 시간의 흐름을 둥글고 정밀한 타이머 게이지와 부드러운 햅틱 피드백 연출을 통해 직관적으로 보여줍니다.",
+      "colors": [
+        {
+          "name": "RITUDY Purple",
+          "hex": "#7667FF"
+        }
+      ],
+      "typography": "JetBrains Mono / Inter (Structured & Numeric)",
+      "logo_shape": "tech",
+      "logo_color_glow": "linear-gradient(135deg, #30d158, #86868b)",
+      "logo_url": "/uploads/1781916230944_Group_635.png"
+    },
+    {
+      "id": 4,
+      "name": "RIMU",
+      "type": "BI",
+      "slogan": "Virtual Music Streaming Platform",
+      "description": "가상 아티스트와 팬덤을 잇는 버추얼 전문 음원 스트리밍 플랫폼 브랜드(BI)입니다. 소리의 아름다운 파동과 웅장한 공간감을 파스텔톤의 물결 파형 로고와 유려한 카드 모션으로 담아냈습니다.",
+      "colors": [
+        {
+          "name": "Melody Pink",
+          "hex": "#ff375f"
+        },
+        {
+          "name": "Deep Indigo",
+          "hex": "#1c1c1e"
+        },
+        {
+          "name": "Acoustic White",
+          "hex": "#f5f5f7"
+        }
+      ],
+      "typography": "Outfit / Montserrat (Expressive & Dynamic)",
+      "logo_shape": "ripple",
+      "logo_color_glow": "linear-gradient(135deg, #ff375f, #1c1c1e)"
+    },
+    {
+      "id": 5,
+      "name": "RIUP",
+      "type": "BI",
+      "slogan": "Popup Store Waiting Platform",
+      "description": "실시간 대기열과 전국 팝업스토어 정보 조회를 돕는 웨이팅 플랫폼 브랜드(BI)입니다. 현장에서 기다리는 지루함을 해소하고 팝업 스토어의 흥미진진한 탐험 여정의 시작을 디자인합니다.",
+      "colors": [
+        {
+          "name": "Waiting Orange",
+          "hex": "#ff9f0a"
+        },
+        {
+          "name": "Active Red",
+          "hex": "#ff453a"
+        },
+        {
+          "name": "Light Canvas",
+          "hex": "#ffffff"
+        }
+      ],
+      "typography": "Outfit / Apple SD Gothic Neo (Vibrant & Interactive)",
+      "logo_shape": "studio",
+      "logo_color_glow": "linear-gradient(135deg, #ff9f0a, #ff453a)"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "티머니GO 대중교통 아이디어 공모전",
+      "category": "planning",
+      "tags": [
+        "기획",
+        "서비스 기획",
+        "공모전",
+        "제안서"
+      ],
+      "description": "티머니GO에 이런게 들어간다면? 대중교통과 관련된 다양한 아이디어를 제안하는 공모전입니다",
+      "long_description": "# T-GO — 대중교통 이동의 이유를 만들다\n## 티머니GO 대중교통 아이디어 공모전 출품작\n\n---\n\n## 프로젝트 개요\n\nT-GO는 티머니GO 대중교통 아이디어 공모전에 출품한 AI 에이전트 기획안이다. 단순히 대중교통 이용을 편리하게 만드는 것을 넘어, 사람들이 대중교통을 포기하려는 순간에 직접 개입해 그 결정을 되돌리는 시스템을 설계했다. 문제 정의부터 기능 설계, 시스템 구조화, UI 목업 제작까지 전 과정을 단독으로 기획하고 디자인했다.\n\n---\n\n## 문제 정의\n\n대한민국의 대중교통 인프라는 이미 세계 최고 수준이다. 서울의 교통 분담률은 최대 74%에 달한다. 그러나 인프라가 충분히 갖춰진 지금도 많은 사람들이 특정 순간마다 대중교통 대신 택시나 자차를 선택한다. 이 이탈에는 인프라 문제가 아닌 더 근본적인 이유가 있다고 판단했다.\n\n실제로 버스를 자주 이용하면서 직접 겪은 불편들을 출발점으로 삼았다. 예정 시간보다 늦게 오는 버스를 하염없이 기다리거나 반대로 일찍 온 버스를 놓치는 경험, 집을 나서기 전 지금 출발하면 정류장에 맞게 도착할 수 있을지 가늠할 방법이 없어 무작정 서두른 경험, 버스가 예상치 못한 정체에 갇혔을 때 그 막힘이 언제까지 이어지고 도착이 언제쯤일지 알 수 없어 답답했던 경험. 이 모든 불편은 하나의 공통점으로 수렴했다.\n\n**대중교통은 이동의 시간이 불확실하다.**\n\n기다리는 시간, 이동하는 시간, 혼잡도, 지연되는 이유 모두 매 순간 다르고 예측할 수 없다는 점이 사람들을 다른 이동 수단으로 발을 돌리게 만든다는 결론에 도달했다.\n\n여기서 한 걸음 더 나아가, 기존 대중교통 앱들이 이 문제를 해결했는지를 점검했다. 티머니GO를 포함한 모든 대중교통 앱은 출발지와 목적지를 입력한 사람에게 경로를 안내한다. 이는 이미 대중교통을 이용하려는 사람들을 위한 기능이다. 대중교통을 포기하려는 순간, 즉 결정 이전 단계에서 개입하는 서비스는 존재하지 않는다는 빈자리를 발견했고, 이것이 T-GO 기획의 출발점이 되었다.\n\n---\n\n## 핵심 전략\n\nT-GO의 방향성은 한 문장으로 정리된다.\n\n**\"대중교통을 선택해야 할 이유를 만든다.\"**\n\n이미 타는 사람을 더 편하게 만드는 접근이 아니라, 불확실성 때문에 이탈한 사람을 돌아오게 만드는 접근이다. 이 전략은 세 가지 측면에서 설득력을 갖도록 설계했다.\n\n첫째, 문제 정의 자체가 차별화된다. 대부분의 모빌리티 기획이 편의성 개선에 집중하는 반면, T-GO는 이탈 방지라는 다른 층위의 문제를 다룬다.\n\n둘째, 티머니의 데이터 강점을 정확히 활용한다. 티머니는 국내 어떤 기업도 보유하지 못한 방대한 승하차 데이터를 가지고 있다. 단순 결제 기록이 아니라 누가, 언제, 어떤 노선을, 어느 정류장에서 이용했는지에 대한 패턴 데이터다. T-GO는 이 독점 데이터 위에서만 작동하는 구조로 설계했다.\n\n셋째, 공익과 수익이 같은 방향을 가리킨다. 대중교통 이용률 증가는 탄소 감소와 도로 혼잡 완화라는 공익 효과로 이어지고, 동시에 티머니 입장에서는 승하차 횟수 증가라는 직접적인 수익으로 연결된다.\n\n---\n\n## 시스템 설계\n\nT-GO는 단일 기능이 아니라 세 개의 레이어로 구성된 AI 에이전트 시스템이다.\n\n### APPS (AI Passenger Prediction System)\n\n대중교통 불확실성의 근본 원인을 혼잡도와 운행 패턴을 사전에 알 수 없다는 데서 찾고, 이를 해결하는 예측 엔진이다. 티머니 승하차 데이터, 지자체 공공데이터, 비콘 실측 데이터를 결합해 버스와 지하철의 노선별, 차량별, 정류장별 혼잡도를 예측한다. 단순 실시간 정보가 아니라 과거 수년간의 승하차 패턴을 학습해 향후 혼잡도 변화까지 예측하는 것이 핵심이며, 비 오는 월요일과 맑은 수요일의 혼잡 패턴이 다르다는 것까지 반영한다. APPS가 예측한 데이터는 AMRS와 T-GO Chat 전체의 판단 근거로 활용된다.\n\n### AMRS (AI Mobility Recommendation System)\n\nAPPS의 예측 데이터를 기반으로 사용자 개개인에게 최적화된 이동 경험을 제공하는 시스템이다. 두 가지 기능으로 구성했다.\n\n스마트 출발 알림은 사용자의 승하차 이력을 분석해 이동 루틴을 학습하고, 같은 패턴이 반복되면 자동으로 루틴으로 등록한다. 사용자가 앱을 열기 전에 먼저 최적 출발 시각과 혼잡도를 알림으로 전달하며, 단순 도착 알림이 아니라 \"지금 출발하면 혼잡한 차량을 타게 되니 3분 뒤 출발해 다음 차량을 타라\"는 판단까지 포함한다.\n\nAI 실시간 경로 추천은 대중교통 탭 상단에 사용자 맞춤 경로를 자동으로 표출한다. 출발지와 목적지를 입력하지 않아도 T-GO가 먼저 오늘의 최적 경로를 제안하며, 요일·시간대·날씨·실시간 혼잡도를 종합해 평소 이용하던 경로라도 오늘 정체가 예상되면 대안 경로를 먼저 보여준다.\n\n### T-GO Chat\n\nT-GO Chat은 독립된 기능이 아니라 APPS와 AMRS 전체를 사용자가 자연어로 접근할 수 있게 만드는 대화형 인터페이스다. 갤럭시 Now Bar를 통해 잠금화면에서 먼저 말을 거는 방식을 구현했다. 사용자가 앱을 열기 전에 \"지금 출발할까요?\", \"길이 막히고 있어요\" 같은 알림으로 먼저 상황을 전달하고, 사용자가 \"지금 어디까지 막혀?\" 같은 질문을 던지면 APPS와 AMRS의 데이터를 종합해 즉시 답하고 대안 경로까지 제시한다.\n\n사용자가 묻기 전에 먼저 개입하고 물었을 때 정확하게 답한다는 점에서, T-GO를 수동적인 어시스턴트가 아닌 능동적인 AI 에이전트로 정의했다.\n\n---\n\n## 디자인 작업\n\n전체 기획안은 피그마로 작업한 6페이지 문서로 구성했다. 표지에서는 티머니 심볼의 조형 요소를 재해석해 브랜드 정체성을 살렸고, 본문 전반에는 티머니의 보라-오렌지 컬러 시스템을 일관되게 적용했다.\n\n문제 정의 페이지에서는 세 가지 핵심 불편 상황을 IF 조건문 형태로 구조화해 시각적으로 표현했고, 이 구조를 솔루션 페이지에서 그대로 이어받아 각 문제가 어떤 기능으로 해결되는지 한눈에 보이도록 연결했다. 기능 상세 페이지에서는 실제 작동 화면을 가정한 UI 목업을 다수 제작했다. 갤럭시 Now Bar 잠금화면 알림, AI 경로 추천 팝업, 정류장 혼잡도 표출 화면 등을 직접 디자인해 텍스트 설명만으로는 전달하기 어려운 사용자 경험을 구체적으로 보여주고자 했다.\n\n---\n\n## 진행 과정에서의 의사결정\n\n기획 과정에서 여러 차례 방향을 재검토했다. 초기에는 사용자 편의 중심의 일반적인 AI 추천 기능으로 출발했으나, 이 방향이 기존 공모전에서 흔히 나올 수 있는 접근이라고 판단해 \"이탈 방지\"라는 더 날카로운 문제 정의로 전환했다. 또한 페르소나 기반 시나리오, 이동 리포트 등 일부 기획 요소는 공모전 예시안과 내용이 겹치는 것을 확인하고 과감히 제외하며 차별성을 지켜냈다. 기능 분류 체계 역시 작업 중반에 APPS와 AMRS라는 명확한 시스템 레이어로 재구조화해 전체 기획의 논리적 완결성을 높였다.\n\n---\n\n## 결과 및 의의\n\n공모전 자체는 입상하지 못했지만, 공모전 종료 직후 티머니GO가 대중교통 라운지 서비스를 출시하며 실시간 이동 추천 등 유사한 방향성의 기능을 선보였다. 이는 기획 과정에서 설정한 문제 인식과 해결 방향이 실제 서비스 트렌드와 맞닿아 있었음을 보여주는 지점이라고 생각한다.\n\n이 프로젝트를 통해 사용자 불편을 데이터 기반으로 구조화하고, 이를 차별화된 시스템 설계로 풀어내는 전 과정을 경험했다. 특히 문제 정의의 날카로움이 곧 솔루션의 설득력으로 이어진다는 점, 그리고 기획 초기 아이디어를 끝까지 고수하기보다 비판적으로 재검토하며 발전시키는 과정이 결과물의 완성도를 좌우한다는 점을 체감했다.",
+      "proposal_link": "/uploads/1781922963514____GO_______________AI___________________.pdf",
+      "image_glow": "linear-gradient(135deg, #0071e3, #30d158)"
+    },
+    {
+      "id": 2,
+      "title": "RITUDY - 뽀모도로 몰입 스터디 타이머 앱",
+      "category": "dev",
+      "tags": [
+        "개발",
+        "Flutter",
+        "디자인",
+        "UI/UX"
+      ],
+      "description": "몰입의 흐름을 시각적으로 전하는 스마트 스터디 타이머 RITUDY입니다. Flutter와 Dart를 활용해 둥근 인터랙션을 구현했습니다.",
+      "long_description": "RITUDY는 학습 습관 정착을 위한 크로스플랫폼 모바일 앱입니다. Flutter의 AnimationController와 Canvas API를 직접 다뤄 부드럽고 쫀득한 타이머 게이지 모션을 구현했으며, 로컬 알림 서비스 연동 및 통계 분석 화면을 갖추고 있습니다.",
+      "demo_link": "#",
+      "github_link": "https://github.com",
+      "image_glow": "linear-gradient(135deg, #30d158, #86868b)"
+    },
+    {
+      "id": 3,
+      "title": "RIBBLE, 버추얼 팬덤 슈퍼앱",
+      "category": "all",
+      "tags": [
+        "기획",
+        "개발",
+        "디자인",
+        "Flutter",
+        "Python"
+      ],
+      "description": "채팅, 쇼핑, 가상 아바타 제어 및 생산성 도구를 결합한 가상 크로스플랫폼 슈퍼앱 RIBBLE입니다.",
+      "long_description": "RIBBLE은 가상 세계와 일상을 심리스하게 연동하는 대규모 다기능 플랫폼 데모입니다. Flutter 기반의 완성도 높은 클라이언트 앱과 Python FastAPI / PostgreSQL 연동 백엔드를 구축하여, 실시간 동기화 채팅, 웹소켓 기반 아바타 제어 등을 통합 구현했습니다.",
+      "proposal_link": "#",
+      "demo_link": "#",
+      "github_link": "https://github.com",
+      "image_glow": "linear-gradient(135deg, #bf5af2, #00f2fe)"
+    },
+    {
+      "id": 4,
+      "title": "성북구 비주얼 리브랜딩",
+      "category": "design",
+      "tags": [
+        "디자인",
+        "브랜딩",
+        "CI/BI"
+      ],
+      "description": "역사의 과거와 주민들간의 오늘과 아이들의 미래를 담은 성북구의 도시 리브랜딩입니다",
+      "long_description": "성북구의 대표적인 역사 문화재와 자율주행 모빌리티 시대를 대비하는 스마트 도시 계획을 융합한 관공서 리브랜딩 프로젝트입니다. 심벌마크, 전용 서체 가이드, 각종 어플리케이션(명함, 서식류, 홍보용 차량 등) 비주얼 시스템을 총체적으로 디자인했습니다.",
+      "demo_link": "#",
+      "image_glow": "linear-gradient(135deg, #ff2997, #ff9f0a)"
+    },
+    {
+      "id": 5,
+      "title": "티머니GO - 모바일 앱 UI/UX 리브랜딩 디자인",
+      "category": "design",
+      "tags": [
+        "디자인",
+        "UI/UX",
+        "브랜딩",
+        "Figma"
+      ],
+      "description": "티머니GO 모바일 앱의 화면 사용성 대폭 개선을 위한 캡슐형 UI 레이아웃 리브랜딩 가이드입니다.",
+      "long_description": "기존 복잡한 메뉴 트리를 가진 모바일 앱의 구조를 개편하고, 한 손 파지가 편리한 캡슐형 플로팅 내비게이션 및 아크릴모피즘 카드를 접목한 사용자 인터페이스 개선 프로젝트입니다. Figma 컴포넌트 라이브러리 및 하이파이 프로토타입 디자인이 포함되어 있습니다.",
+      "proposal_link": "#",
+      "image_glow": "linear-gradient(135deg, #ff453a, #ff9f0a)"
+    }
+  ],
+  "contact_settings": [
+    {
+      "department_name": "컨텐츠 크리에이팅",
+      "email_address": "peng107070113@gmail.com",
+      "id": 1
+    },
+    {
+      "department_name": "플랫폼 솔루션",
+      "email_address": "connect.beyondfantasium@gmail.com",
+      "id": 2
+    },
+    {
+      "department_name": "플랫폼 운영팀",
+      "email_address": "bfyoonseul@gmail.com",
+      "id": 3
+    },
+    {
+      "department_name": "RIBBLE 플랫폼 관리팀",
+      "email_address": "bfyoonseul@gmail.com",
+      "id": 4
+    },
+    {
+      "department_name": "기업문의",
+      "email_address": "bfyoonseul@gmail.com",
+      "id": 5
+    },
+    {
+      "department_name": "개인 문의",
+      "email_address": "bfyoonseul@gmail.com",
+      "id": 6
+    }
+  ],
+  "contents": [
+    {
+      "id": 1,
+      "type": "youtube",
+      "title": "Playlist | 새로워진 이세계아이돌 플레이리스트, 즐길 준비 됐어? 🪩 화이트(White) 신곡 업데이트 완로한 이세계아이돌 노래 모음",
+      "thumbnail": "🎬 STUDIO Peng1 Official Channel",
+      "stats": "4.9천회 • 5개월 전",
+      "link": "https://www.youtube.com/@studio_peng1",
+      "badge": "Virtual Art",
+      "colorGlow": "rgba(255, 213, 129, 0.15)",
+      "videoId": "z5HyWHyzQVM"
+    },
+    {
+      "id": 2,
+      "type": "youtube",
+      "title": "[본리에어 / VONRI AIR] 힐링 버추얼 항공 여정 & ASMR 사운드 스트리밍",
+      "thumbnail": "✈️ VONRI AIR Streaming Channel",
+      "stats": "구독자 2.5만명 • 동영상 120개",
+      "link": "https://www.youtube.com/@vonriair",
+      "badge": "V-Stream",
+      "colorGlow": "rgba(255, 213, 129, 0.15)",
+      "videoId": "y83x7MgzWOA"
+    },
+    {
+      "id": 3,
+      "type": "instagram",
+      "title": "RIBBLE 버추얼 슈퍼앱 UI/UX 모바일 반응형 디자인 모듈 제작 비하인드",
+      "thumbnail": "📱 RIBBLE Super-App UX Guidelines",
+      "stats": "좋아요 4.8천개 • 3일 전",
+      "link": "https://instagram.com",
+      "badge": "Design UI",
+      "colorGlow": "rgba(255, 213, 129, 0.1)"
+    },
+    {
+      "id": 4,
+      "type": "instagram",
+      "title": "RITUDY 공부 타이머 한 손 조작 캡슐형 인터페이스 설계 및 디자인 시스템",
+      "thumbnail": "🎨 RITUDY Design System & Haptic UX",
+      "stats": "좋아요 2.1천개 • 1주 전",
+      "link": "https://instagram.com",
+      "badge": "Product Design",
+      "colorGlow": "rgba(255, 213, 129, 0.1)"
+    },
+    {
+      "id": 5,
+      "type": "blog",
+      "title": "RIBBLE 웹소켓 아바타 제어 모듈 개발 비하인드",
+      "thumbnail": "✍️ BF YOONSEUL Tech Blog",
+      "stats": "조회수 1.2만회 • 2026-06-20",
+      "link": "#",
+      "badge": "Tech Insight",
+      "colorGlow": "rgba(41, 151, 255, 0.15)",
+      "blogContent": "## 1. 개요\n\n어떻게 브라우저 환경에서 60fps 레이턴시 없이 아바타 뼈대 구조를 동기화했는지에 대한 엔지니어링 기록입니다. Flutter와 WebSockets 프로토콜을 사용해 네트워크 대역폭 소비를 최소화하며 부드러운 아바타 모션을 구현했습니다.\n\n---\n\n## 2. 해결 과제\n\n- 실시간 멀티플레이어 환경에서 레이턴시로 인한 모션 끊김 현상 방지\n- 프레임 드랍 발생 시 뼈대 데이터 보간(Interpolation) 연산\n\n---\n\n## 3. 해결 방안 및 아키텍처\n\n- **WebSockets 연결**: 클라이언트와 Python FastAPI 서버 간 지속적 커넥션을 유지해 통신 속도를 비약적으로 단축시켰습니다.\n- **보간(Lerp) 알고리즘**: 프레임이 깨질 때 이전 위치와 다음 위치 사이의 좌표를 선형 보간하여 뚝뚝 끊기는 부자연스러움을 해소했습니다.\n\n---\n\n### 4. 성과 및 의의\n\n본 모듈 탑재 후 가상 아티스트 쇼케이스 데모에서 초당 60프레임 동기화를 안정적으로 성공시켰습니다."
+    },
+    {
+      "id": 6,
+      "type": "blog",
+      "title": "성북구 리브랜딩 과정에서 캡슐 레이아웃을 채택한 디자인적 이유",
+      "thumbnail": "✍️ BF YOONSEUL Design Blog",
+      "stats": "조회수 8.4천회 • 2026-06-18",
+      "link": "#",
+      "badge": "Design Story",
+      "colorGlow": "rgba(255, 33, 151, 0.15)",
+      "blogContent": "## 1. 서론\n\n성북구 도시 브랜딩 프로젝트 중 복잡한 정보 계층 구조를 단순화하고 시민 친화적 모바일을 위해 캡슐 레이아웃을 전면 채택한 디자인 의도를 공유합니다.\n\n---\n\n## 2. 디자인 방향성\n\n성북구는 전통 역사 지구와 첨단 IT 밸리가 병존하는 이중적 개성을 지니고 있습니다. 이를 연결하기 위해 곡선형 캡슐 내비게이션을 메인 레이아웃 프레임워크로 채택했습니다.\n\n- **친근함**: 날카로운 각진 모서리를 둥근 캡슐 형태로 다듬어 열린 친밀감 부여\n- **일관성**: 모바일 한 손 터치 조작 범위 내에 탭들을 모아 두는 편의성 극대화\n\n---\n\n### 3. 디자인적 시사점\n\n공공 서비스 디자인도 감각적이고 유려할 수 있음을 입증하는 좋은 계기가 되었습니다."
+    }
+  ],
+  "news": [
+    {
+      "id": 2,
+      "title": "BF YOONSEUL, BF 창립 4주년 맞아 몰입 플랫폼 'RITUDY' 7월 7일 정식 출시",
+      "press": "BF News Room",
+      "date": "2026-06-19",
+      "link": "https://mk.co.kr",
+      "summary": "BF YOONSEUL의 스마트 스터디 타이머 솔루션 RITUDY가 3개월의 개발 기간을 거쳐 다음 달 7일, 안드로이드 사용자를 대상으로 베타 서비스를 실시한다고 밝혔다.",
+      "content": "- 모체 'Blog : Peng1' 오픈 4주년 기념일에 맞춰 차세대 서비스 전격 공개\n- 모기업 BF의 통합 계정 시스템을 통해 앞으로 나오는 서비스 간의 연동성 극대화\n- 버추얼 팬덤 슈퍼앱 'RIBBLE'과의 자산 연동으로 플랫폼 확장 본격화\n\n\n버추얼 크리에이터 및 음악 컨텐츠를 기반으로 독창적인 생태계를 개척해 온 BF YOONSEUL이 모회사 BF의 창립 4주년을 맞아 몰입 플랫폼 ‘RITUDY(리터디)’를 오는 7월 7일 정식 출시한다고 밝혔다.\n\n이번 정식 서비스 개시는 BF의 모체이자 크리에이티브의 시작점이었던 독자 미디어 블로그 ‘Blog : Peng1’의 최초 시작일인 2022년 7월 7일로부터 정확히 4주년이 되는 날에 맞춰 단행되어 그 의미를 더했다. 지난 4년간 축적된 컨텐츠 제작 역량과 사용자 경험(UX) 디자인 노하우가 집약된 정식 서비스를 전격 선포한다는 취지다.\n\n---\n\n# 유저 감성 자극하는 정교한 UI 디자인과 플렉서블 배너 도입\n이번에 출시되는 ‘RITUDY’는 미니멀리즘 기반의 ‘Midnight Navy’ 테마를 중심으로 아크릴모피즘(Acrylmorphism), 글래스모피즘(Glassmorphism) 등 최신 UI/UX 트렌드를 반영하여 시각적 완성도를 높였다.\n\n특히 주목할 만한 기능은 유저의 컨텍스트에 따라 유기적으로 변하는 ‘플렉서블 메인 배너(Flexible Main Banner)’다. 평상시에는 '역대 수능 필적확인란 큐레이션' 및 AI 기반 명언을 랜덤하게 표출해 사용자의 감성을 차분하게 자극하며, 타이머가 구동되는 순간에는 실시간 타이머 인디케이터로 완전히 트랜스폼하여 극도의 몰입 환경을 선사한다.\n\n또한, 유저가 원하는 일러스트를 배치할 수 있는 '이미지 모드' 시스템을 분리 도입하고 배경 색 테마(Tint/Overlay) 조절 장치를 탑재해, 어떤 이미지를 넣더라도 가독성이 깨지지 않고 특유의 깊이 있는 무드가 보정되도록 정교하게 설계됐다.\n\n---\n\n# 전용 가상 재화 'BPO'와 크루 페르소나 'RIDER' 중심의 세계관 전개\n비욘드 판타지엄은 RITUDY 출시와 함께 자사 플랫폼 생태계를 관통하는 고유의 브랜딩 아키텍처를 확립했다.\n\n먼저, 유저들이 몰입을 통해 획득하는 독점 가상 재화의 명칭을 ‘BPO(비포)’로 전면 개편했다. 이는 모기업 비욘드 판타지엄의 통합 포인트(BF POint)라는 직관적 의미와, 몰입하기 전(Before)의 노력을 정밀하게 세공해 낸다는 브랜드 철학을 동시에 내포한다. 유저들은 이렇게 모은 BPO 포인트를 통해 앱 내 ‘테마 스토어’에서 레이아웃 카드와 커스텀 테마를 구매할 수 있다.\n\n---\n\n# 연말 'RIBBLE' 슈퍼앱 런칭… \"통합 플랫폼 생태계로의 진화\"\nRITUDY는 단순한 단독 애플리케이션에 그치지 않고, BF PnS와 함께 준비 중인 플랫폼 생태계와 연동되어 학생 사용자층을 끌어모으는 역할을 수행하게 된다.\n\nRITUDY를 통해 구축된 유저들의 ‘BFO STUDY ID 카드’는 등급(Basic, Gold, Black Infinite)에 따라 카드 컬러와 비주얼이 다이내믹하게 트랜스폼되어 소유욕을 자극하며, 이 데이터와 자산은 올해 11월 출시 예정인 버추얼 팬덤 슈퍼앱 ‘RIBBLE(리블)’과 백엔드 코어 수준에서 연동된다. RITUDY의 몰입 유저와 라이브 방송, 음악 차트, 커뮤니티를 아우르는 RIBBLE의 팬덤 유저가 하나의 거대한 'BF 통합 계정' 시스템 아래 완벽하게 연결되는 셈이다.\n\nBF YOONSEUL의 리드 디렉터는 \"RITUDY는 4년 전 'Blog : Peng1'이라는 작은 불씨로 시작된 우리의 경험과 진정으로 원하는 점이 무엇인지 분석한 결과와 결합해 탄생한 결과물\"이라며, \"앞으로도 시장이 진정으로 원하는 것이 무엇인지 파악하고 우리가 가장 잘하는 것을 통해 세상을 뒤집을 것\"이라고 강력한 포부를 밝혔다.\n\n\n한편, 안드로이드 OS 환경에서 앱 이탈 시에도 정밀한 몰입 시간을 측정하고 실시간 알림 동기화를 보장하기 위해 고성능 포그라운드 서비스(Foreground Service) 기술을 탑재한 'RITUDY'는 오는 7월 7일부터 구글 플레이스토어를 통해 정식으로 만나볼 수 있다.",
+      "colorGlow": "rgba(255, 213, 129, 0.15)",
+      "thumbnail_url": "",
+      "thumbnailUrl": ""
+    }
+  ]
+}

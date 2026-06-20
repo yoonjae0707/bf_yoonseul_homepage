@@ -1,0 +1,326 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  animation: fadeInUp 0.6s var(--ease-apple) forwards;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.titleArea {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.titleArea h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.badge {
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-capsule);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btnGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.sideBtn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--radius-button);
+  transition: var(--transition-fast);
+}
+
+.sideBtn:hover {
+  background: rgba(var(--foreground-raw), 0.05);
+  transform: translateX(4px);
+}
+
+.sideActive {
+  background: var(--foreground) !important;
+  color: var(--background) !important;
+  box-shadow: 0 8px 20px rgba(var(--foreground-raw), 0.15);
+}
+
+.mainPanel {
+  min-width: 0; /* Prevents flex items from overflowing */
+}
+
+/* Forms & Cards */
+.formCard {
+  padding: 40px;
+}
+
+.formCard h2 {
+  font-size: 1.6rem;
+  font-weight: 750;
+  margin-bottom: 8px;
+}
+
+.formCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  padding: 12px 16px;
+  border-radius: var(--radius-button);
+  border: 1px solid var(--card-border);
+  background: rgba(var(--foreground-raw), 0.03);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.15);
+  background: rgba(var(--foreground-raw), 0.01);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* List section */
+.listSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.sectionHeader h2 {
+  font-size: 1.6rem;
+  font-weight: 750;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.listCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.typeTag {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 750;
+  padding: 2px 8px;
+  border-radius: var(--radius-capsule);
+  background: rgba(var(--foreground-raw), 0.08);
+  color: var(--foreground);
+}
+
+.typeTag.tagRed {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+}
+
+.typeTag.tagPink {
+  background: rgba(225, 48, 108, 0.1);
+  color: #e1306c;
+}
+
+.listCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cardSlogan {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.deleteBtn {
+  background: #ff453a !important;
+  color: white !important;
+}
+
+.deleteBtn:hover {
+  box-shadow: 0 4px 12px rgba(255, 69, 58, 0.3) !important;
+}
+
+/* Department Email Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.table th {
+  padding: 14px 16px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--card-border);
+  font-size: 0.9rem;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--card-border);
+  font-size: 0.95rem;
+}
+
+.deptName {
+  font-weight: 700;
+}
+
+.deptEmail {
+  font-family: monospace;
+  color: var(--text-secondary);
+}
+
+.deleteBtnTable {
+  background: transparent;
+  border: 1px solid #ff453a;
+  color: #ff453a;
+  padding: 6px 14px;
+  border-radius: var(--radius-capsule);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deleteBtnTable:hover {
+  background: #ff453a;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboardLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+  }
+  
+  .sideBtn {
+    white-space: nowrap;
+    width: auto;
+  }
+}

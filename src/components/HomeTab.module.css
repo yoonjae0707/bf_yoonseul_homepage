@@ -1,38 +1,108 @@
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 160px;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 120px;
 }
 
-/* Hero styling */
+/* Background SVG Wave Lines */
+.svgBackground {
+  position: absolute;
+  top: 0;
+  left: -10vw;
+  width: 120vw;
+  height: 600px;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wavePath1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawWave 4s ease-out forwards;
+}
+
+.wavePath2 {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawWave 5s ease-out 0.5s forwards;
+}
+
+@keyframes drawWave {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 60px 0;
-  gap: 24px;
+  padding: 140px 20px;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.floatingSphere {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 160px;
+  height: 160px;
+  z-index: -1;
+  pointer-events: none;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.sphereInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255, 213, 129, 0.2), rgba(41, 151, 255, 0.2));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15),
+              inset 0 0 20px rgba(255, 255, 255, 0.25);
+  animation: floatSphere 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatSphere {
+  0% {
+    transform: translateY(0) scale(0.95);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.05);
+  }
 }
 
 .badge {
   background: rgba(var(--accent-rgb), 0.08);
   border: 1px solid rgba(var(--accent-rgb), 0.2);
   color: var(--accent);
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: var(--radius-capsule);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   backdrop-filter: var(--glass-blur);
 }
 
 .title {
-  font-size: 3.5rem;
-  line-height: 1.15;
+  font-size: 3.8rem;
+  line-height: 1.2;
   font-weight: 900;
   letter-spacing: -0.04em;
+  word-break: keep-all;
 }
 
 .title span {
@@ -42,164 +112,648 @@
 }
 
 .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
-  max-width: 680px;
-  line-height: 1.6;
+  max-width: 760px;
+  line-height: 1.75;
+  word-break: keep-all;
 }
 
 .ctaGroup {
   display: flex;
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
-/* Services section */
-.servicesSection {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.sectionTitle {
-  font-size: 2rem;
-  text-align: center;
+/* 2. Brand Vision Section (Spacious Statement) */
+.visionSection {
   position: relative;
-  margin-bottom: 10px;
-}
-
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 4px;
-  background: var(--accent);
-  border-radius: var(--radius-capsule);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.card {
-  padding: 40px 30px;
+  z-index: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.iconWrapper {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: rgba(var(--accent-rgb), 0.1);
-  color: var(--accent);
-  display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px;
 }
 
-.card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
+.visionTitle {
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  max-width: 900px;
+  word-break: keep-all;
 }
 
-.card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Philosophy */
-.philosophy {
-  width: 100%;
-}
-
-.philosophyCard {
-  width: 100%;
-  padding: 60px;
-  background: radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.08), transparent 50%), var(--card-bg);
-}
-
-.philosophyContent {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.philosophyContent h2 {
-  font-size: 2.2rem;
-  background: linear-gradient(135deg, var(--foreground), var(--text-secondary));
+.visionTitle span {
+  background: linear-gradient(135deg, var(--accent), #ff2997);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.philosophyContent p {
+.visionText {
+  font-size: 1.25rem;
+  line-height: 1.85;
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.7;
   max-width: 800px;
+  word-break: keep-all;
 }
 
-.stats {
+/* 3. Core Identity Pillars (3 Columns Bordered) */
+.pillarsSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.pillarsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 20px;
-  border-top: 1px solid var(--card-border);
-  padding-top: 40px;
+  gap: 56px;
 }
 
-.statItem h4 {
-  font-size: 1.5rem;
+.pillarItem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  border-top: 1px solid var(--card-border);
+  padding-top: 32px;
+}
+
+.pillarNum {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  font-family: monospace;
+  line-height: 1;
+}
+
+.pillarTitle {
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+.pillarDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+/* 3.5. Detailed Corporate Value Section (Spacious Split Grid) */
+.detailCompanySection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.companyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.companyLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.companyMainTitle {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  word-break: keep-all;
+}
+
+.companyMainTitle span {
+  background: linear-gradient(135deg, var(--accent), #ff2997);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.companySubText {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+.companyRight {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+}
+
+.introBlock {
+  border-left: 2px solid var(--accent);
+  padding-left: 24px;
+}
+
+.introBlock h4 {
+  font-size: 1.2rem;
+  font-weight: 850;
+  margin-bottom: 8px;
+  color: var(--foreground);
+}
+
+.introBlock p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+/* 3.6. Chronological R&D Timeline */
+.timelineSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.timelineContainer {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 120px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--card-border);
+  z-index: 0;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineYear {
+  width: 100px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+  font-family: monospace;
+  text-align: right;
+  padding-right: 20px;
+  line-height: 1.2;
+}
+
+.timelineCards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.timelineCard {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition-apple);
+}
+
+.timelineCard:hover {
+  border-color: rgba(var(--accent-rgb), 0.25);
+  box-shadow: 0 12px 40px var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+.tagLabel {
+  font-size: 0.7rem;
+  font-weight: 850;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timelineCard h4 {
+  font-size: 1.15rem;
+  font-weight: 850;
+  line-height: 1.4;
+  color: var(--foreground);
+}
+
+.timelineCard p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+/* Section Header Utility */
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 20px;
+  gap: 12px;
+}
+
+.badgeLabel {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* Portfolio Showcase Grid (2 Columns Layout) */
+.portfolioSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.filterCapsule {
+  display: flex;
+  background: rgba(var(--foreground-raw), 0.03);
+  border: 1px solid var(--card-border);
+  padding: 5px;
+  border-radius: var(--radius-capsule);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: var(--radius-capsule);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filterBtn:hover {
+  color: var(--foreground);
+}
+
+.filterActive {
+  background: var(--foreground);
+  color: var(--background) !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 0 20px;
+}
+
+.projectCard {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  height: 100%;
+}
+
+.cardBacklight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.5s var(--ease-apple);
+}
+
+.projectCard:hover .cardBacklight {
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.statusBadge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.statusBadge.active {
+  background: rgba(191, 90, 242, 0.12);
+  color: #bf5af2;
+  border: 1px solid rgba(191, 90, 242, 0.2);
+}
+
+.statusBadge.stable {
+  background: rgba(48, 209, 88, 0.12);
+  color: #30d158;
+  border: 1px solid rgba(48, 209, 88, 0.2);
+}
+
+.statusBadge.completed {
+  background: rgba(255, 41, 151, 0.12);
+  color: #ff2997;
+  border: 1px solid rgba(255, 41, 151, 0.2);
+}
+
+.categoryLabel {
+  font-size: 0.75rem;
+  font-weight: 750;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.cardTitle {
+  font-size: 1.45rem;
+  font-weight: 850;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.cardDesc {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  word-break: keep-all;
+  flex-grow: 1;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techTag {
+  font-size: 0.85rem;
+  font-weight: 700;
   color: var(--accent);
 }
 
-.statItem p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
+/* Core Services (2 Columns Layout) */
+.servicesSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 0 20px;
+}
+
+.serviceCard {
+  padding: 56px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+
+.serviceCardWide {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.serviceWideContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.serviceIcon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgba(var(--accent-rgb), 0.08);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 850;
+}
+
+.serviceCard p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+/* Massive Contact Card Link */
+.contactSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.contactCardLink {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 64px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contactCardGlow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(25%, -50%);
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.22) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  transition: transform 0.8s var(--ease-apple);
+}
+
+.contactCardLink:hover .contactCardGlow {
+  transform: translate(20%, -50%) scale(1.1);
+}
+
+.contactCardContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.contactCardTitle {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+}
+
+.contactCardTitle span {
+  background: linear-gradient(135deg, var(--accent), #ff2997);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: transform 0.5s var(--ease-apple);
+}
+
+.contactCardLink:hover .contactCardTitle span {
+  transform: translateX(12px);
+}
+
+.contactCardDesc {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 760px;
+  word-break: keep-all;
+}
+
+/* Responsive adjustment */
 @media (max-width: 900px) {
+  .container {
+    gap: 100px;
+  }
+  
+  .title {
+    font-size: 2.6rem;
+  }
+  
+  .visionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .companyGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .timelineLine {
+    left: 20px;
+  }
+  
+  .timelineItem {
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 40px;
+  }
+  
+  .timelineYear {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    font-size: 1.6rem;
+  }
+  
+  .timelineCards {
+    gap: 16px;
+  }
+  
   .grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
-  .stats {
+  .servicesGrid {
     grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 2.3rem;
+    gap: 20px;
   }
   
-  .subtitle {
-    font-size: 0.95rem;
-  }
-  
-  .ctaGroup {
+  .serviceCardWide {
     flex-direction: column;
-    width: 100%;
+    align-items: flex-start;
+    gap: 20px;
   }
   
-  .ctaGroup a {
-    width: 100%;
+  .contactCardLink {
+    padding: 60px 32px;
   }
   
-  .philosophyCard {
-    padding: 30px 20px;
+  .contactCardTitle {
+    font-size: 2.0rem;
   }
   
-  .philosophyContent h2 {
-    font-size: 1.7rem;
+  .floatingSphere {
+    width: 120px;
+    height: 120px;
   }
 }

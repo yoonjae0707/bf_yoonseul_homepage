@@ -3,7 +3,7 @@
   max-width: 1000px;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
 }
 
 /* Header */
@@ -25,6 +25,7 @@
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+  backdrop-filter: var(--glass-blur);
 }
 
 .title {
@@ -40,29 +41,87 @@
   line-height: 1.6;
 }
 
-/* Brand Grid */
-.brandGrid {
+/* Navigator Section */
+.navigatorSection {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+
+/* Sidebar Brand Tabs list */
+.sidebar {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 100%;
+  gap: 12px;
 }
 
-.brandCard {
+.sidebarBtn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--foreground);
+}
+
+.sidebarBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  transform: translateX(4px);
+}
+
+.activeBtn {
+  background: rgba(var(--accent-rgb), 0.05);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.15);
+}
+
+.sidebarBadge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: var(--radius-capsule);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  text-transform: uppercase;
+}
+
+.sidebarName {
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+/* Detail Box */
+.detailBox {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 280px 1fr;
   overflow: hidden;
   position: relative;
+  min-height: 480px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
-.brandCard:hover {
-  transform: none; /* disable default scale-up in acrylic-card */
-  box-shadow: 0 16px 48px 0 var(--shadow-hover);
-  border-color: rgba(var(--accent-rgb), 0.15);
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Logo container & Animations */
-.logoContainer {
+.fadeOut {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Logo Pane */
+.logoPane {
   height: 100%;
   min-height: 280px;
   background: rgba(var(--foreground-raw), 0.02);
@@ -74,16 +133,38 @@
   overflow: hidden;
 }
 
+.logoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.uploadedLogo {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+  animation: floatLogo 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
 .bgGlow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  filter: blur(45px);
-  opacity: 0.18;
+  filter: blur(50px);
+  opacity: 0.22;
   z-index: 1;
   pointer-events: none;
 }
@@ -96,7 +177,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
 }
 
 .ripple1, .ripple2, .ripple3 {
@@ -150,7 +230,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
 }
 
 .cube {
@@ -192,7 +271,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
   gap: 10px;
 }
 
@@ -217,7 +295,6 @@
   animation: floatCapsule2 5s ease-in-out infinite;
 }
 
-/* Specific mix blend mode for dark theme */
 [data-theme="dark"] .capsule2 {
   mix-blend-mode: screen;
 }
@@ -232,21 +309,21 @@
   50% { transform: rotate(15deg) translate(8px, 5px); }
 }
 
-/* Brand Info Card Content */
-.brandInfo {
+/* Content Details Info */
+.brandDetails {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
-.brandHeader {
+.brandMeta {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.typeBadge {
+.typeTag {
   font-size: 0.7rem;
   font-weight: 800;
   padding: 3px 8px;
@@ -256,14 +333,14 @@
   border: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
-.brandName {
-  font-size: 1.6rem;
-  font-weight: 850;
+.brandTitle {
+  font-size: 1.8rem;
+  font-weight: 900;
   letter-spacing: -0.03em;
 }
 
 .slogan {
-  font-size: 1.02rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--accent);
   font-style: italic;
@@ -271,8 +348,8 @@
 
 .description {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.98rem;
+  line-height: 1.7;
 }
 
 /* Brand Assets Row */
@@ -281,7 +358,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   border-top: 1px solid var(--card-border);
-  margin-top: 14px;
+  margin-top: 10px;
   padding-top: 24px;
 }
 
@@ -331,18 +408,47 @@
   color: var(--foreground);
 }
 
-@media (max-width: 768px) {
-  .brandCard {
+.actionsRow {
+  margin-top: 10px;
+  border-top: 1px solid var(--card-border);
+  padding-top: 24px;
+}
+
+/* Responsive styling */
+@media (max-width: 900px) {
+  .navigatorSection {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
-  .logoContainer {
-    min-height: 220px;
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .sidebarBtn {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  .sidebarBtn:hover {
+    transform: none;
+  }
+  
+  .detailBox {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .logoPane {
     border-right: none;
     border-bottom: 1px solid var(--card-border);
+    min-height: 220px;
   }
   
-  .brandInfo {
+  .brandDetails {
     padding: 30px 20px;
   }
   

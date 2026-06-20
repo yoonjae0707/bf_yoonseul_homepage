@@ -126,31 +126,6 @@
   padding: 8px 16px;
 }
 
-.otherContacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border-top: 1px solid var(--card-border);
-  padding-top: 24px;
-}
-
-.contactItem {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.contactItem span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-}
-
-.contactItem p {
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
 /* Form Styles */
 .formRow {
   display: grid;
@@ -171,7 +146,8 @@
 }
 
 .formGroup input,
-.formGroup textarea {
+.formGroup textarea,
+.formGroup select {
   border: 1px solid var(--card-border);
   background: rgba(var(--foreground-raw), 0.02);
   border-radius: 12px;
@@ -182,6 +158,23 @@
   transition: var(--transition-fast);
 }
 
+.formGroup select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='rgba(110,110,115,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24' width='16' height='16' xmlns='http://www.w3.org/2000/svg'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.formGroup select option {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-weight: 600;
+}
+
 .formGroup input::placeholder,
 .formGroup textarea::placeholder {
   color: var(--text-secondary);
@@ -189,7 +182,8 @@
 }
 
 .formGroup input:focus,
-.formGroup textarea:focus {
+.formGroup textarea:focus,
+.formGroup select:focus {
   outline: none;
   border-color: var(--accent);
   background: rgba(var(--accent-rgb), 0.03);

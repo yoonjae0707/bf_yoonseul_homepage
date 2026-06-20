@@ -1,19 +1,47 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import dbData from '@/data/db.json';
 import styles from './ContactTab.module.css';
+
+interface Department {
+  id?: number;
+  department_name: string;
+  email_address: string;
+}
 
 export default function ContactTab() {
   const [copied, setCopied] = useState(false);
+  const [departments, setDepartments] = useState<Department[]>(() => dbData.contact_settings);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    department: dbData.contact_settings[0]?.department_name || '총괄 / 기획 부서',
     subject: '',
     message: '',
   });
   const [status, setStatus] = useState<'idle' | 'success' | 'sending'>('idle');
 
-  const emailAddress = 'contact@bf-yoonseul.com';
+  useEffect(() => {
+    async function loadDepartments() {
+      try {
+        const res = await fetch('/api/admin/data');
+        if (!res.ok) throw new Error('Failed to fetch data');
+        const data = await res.json();
+        
+        if (data && data.contact_settings && data.contact_settings.length > 0) {
+          setDepartments(data.contact_settings);
+          // Set initial selection to first fetched department name
+          setFormData(prev => ({ ...prev, department: data.contact_settings[0].department_name }));
+        }
+      } catch (err) {
+        console.warn('Using static fallback for departments:', err);
+      }
+    }
+    loadDepartments();
+  }, []);
+
+  const emailAddress = 'bfyoonseul@gmail.com';
 
   const copyEmail = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -21,7 +49,7 @@ export default function ContactTab() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -32,10 +60,21 @@ export default function ContactTab() {
       alert('필수 입력 항목을 입력해 주세요.');
       return;
     }
+    
+    const targetDept = departments.find(d => d.department_name === formData.department);
+    const targetEmail = targetDept ? targetDept.email_address : emailAddress;
+
     setStatus('sending');
     setTimeout(() => {
       setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      alert(`[문의 접수 완료]\n\n보내주신 문의가 ${formData.department}(수신 이메일: ${targetEmail})로 성공적으로 라우팅되었습니다.`);
+      setFormData(prev => ({
+        ...prev,
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      }));
       setTimeout(() => setStatus('idle'), 3000);
     }, 1500);
   };
@@ -47,8 +86,8 @@ export default function ContactTab() {
         <div className={styles.badge}>GET IN TOUCH</div>
         <h2 className={styles.title}>협업 문의</h2>
         <p className={styles.subtitle}>
-          새로운 프로젝트 기획, Flutter 앱 개발, 백엔드 서버 인프라 구축, UI/UX 브랜딩 디자인 등<br />
-          BF YOONSEUL과의 협업 제안을 환영합니다.
+          새로운 아이디어 기획, 디자인 브랜딩, 콘텐츠 제작 등<br />
+          BF YOONSEUL과의 다양한 협업 제안을 환영합니다.
         </p>
       </section>
 
@@ -75,16 +114,7 @@ export default function ContactTab() {
             </div>
           </div>
 
-          <div className={styles.otherContacts}>
-            <div className={styles.contactItem}>
-              <span>📞 Tel:</span>
-              <p>+82 10-1234-5678 (임의 연락처)</p>
-            </div>
-            <div className={styles.contactItem}>
-              <span>📍 Office:</span>
-              <p>서울특별시 마포구 백범로 (임의 주소)</p>
-            </div>
-          </div>
+
         </div>
 
         {/* Inquiry Form */}
@@ -120,6 +150,23 @@ export default function ContactTab() {
           </div>
 
           <div className={styles.formGroup}>
+            <label htmlFor="department">문의 부서 *</label>
+            <select
+              id="department"
+              name="department"
+              value={formData.department}
+              onChange={handleChange}
+              required
+            >
+              {departments.map((dept, idx) => (
+                <option key={idx} value={dept.department_name}>
+                  {dept.department_name}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className={styles.formGroup}>
             <label htmlFor="subject">제목</label>
             <input
               type="text"
@@ -138,7 +185,7 @@ export default function ContactTab() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="프로젝트 일정, 상세 요구사항 등을 적어주세요."
+              placeholder="기획하시거나 만들고 싶은 아이디어를 자유롭게 공유해 주세요."
               rows={5}
               required
             />
